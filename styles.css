@@ -1,0 +1,303 @@
+#avito-notes-toolbar {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 2147483646;
+  display: flex;
+  gap: 8px;
+}
+
+#avito-notes-toolbar button {
+  min-width: 86px;
+  height: 38px;
+  padding: 0 14px;
+  border: 1px solid #d5d9de;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #2f3337;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.14);
+  cursor: pointer;
+  font: 600 14px/1 Arial, sans-serif;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+#avito-notes-toolbar button:hover {
+  border-color: #9da5ad;
+}
+
+#avito-notes-button.avito-notes-button-has-note {
+  border-color: #38a169;
+  background: #38a169;
+  color: #ffffff;
+}
+
+#avito-notes-modal,
+#avito-all-notes-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483647;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 64px 16px 16px;
+  background: rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+#avito-notes-modal[hidden],
+#avito-all-notes-modal[hidden] {
+  display: none;
+}
+
+.avito-notes-dialog,
+.avito-notes-all-dialog {
+  width: min(460px, calc(100vw - 32px));
+  padding: 16px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+}
+
+.avito-notes-all-dialog {
+  width: min(700px, calc(100vw - 32px));
+  max-height: calc(100vh - 80px);
+}
+
+.avito-notes-header,
+.avito-notes-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.avito-notes-header h2 {
+  margin: 0;
+  color: #2f3337;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.avito-notes-icon-button {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #6b7177;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.avito-notes-icon-button:hover {
+  background: #f1f3f5;
+}
+
+.avito-notes-page {
+  overflow: hidden;
+  margin: 8px 0 12px;
+  color: #7b8188;
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#avito-notes-textarea {
+  display: block;
+  width: 100%;
+  min-height: 150px;
+  padding: 10px;
+  border: 1px solid #c8cdd2;
+  border-radius: 8px;
+  color: #2f3337;
+  box-sizing: border-box;
+  font: 14px/1.45 Arial, sans-serif;
+  outline: none;
+  resize: vertical;
+}
+
+#avito-notes-textarea:focus {
+  border-color: #38a169;
+  box-shadow: 0 0 0 2px rgba(56, 161, 105, 0.18);
+}
+
+.avito-notes-info {
+  max-height: 260px;
+  overflow-y: auto;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #e1e4e7;
+  color: #2f3337;
+}
+
+.avito-notes-info h3 {
+  margin: 0 0 10px;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.avito-notes-info-row {
+  margin-bottom: 9px;
+}
+
+.avito-notes-info-label {
+  margin-bottom: 2px;
+  color: #6b7177;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.avito-notes-info-value {
+  color: #2f3337;
+  font-size: 13px;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.avito-notes-params {
+  margin: 4px 0 10px;
+  padding-left: 18px;
+  color: #2f3337;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.avito-notes-info-hint {
+  margin-top: 8px;
+  color: #7b8188;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.avito-notes-history {
+  max-height: 230px;
+  overflow-y: auto;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #e1e4e7;
+}
+
+.avito-notes-history h3 {
+  margin: 0 0 10px;
+  color: #2f3337;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.avito-notes-history-item {
+  margin-bottom: 10px;
+  padding: 8px 9px;
+  border: 1px solid #e1e4e7;
+  border-radius: 7px;
+  background: #f8f9fa;
+}
+
+.avito-notes-history-date {
+  display: block;
+  margin-bottom: 4px;
+  color: #6b7177;
+  font-size: 11px;
+}
+
+.avito-notes-history-text {
+  color: #2f3337;
+  font-size: 13px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.avito-notes-history-empty {
+  color: #7b8188;
+  font-size: 12px;
+}
+
+.avito-notes-all-list {
+  max-height: calc(100vh - 150px);
+  overflow-y: auto;
+  margin-top: 14px;
+}
+
+.avito-notes-all-card {
+  display: block;
+  margin-bottom: 10px;
+  padding: 11px 12px;
+  border: 1px solid #e1e4e7;
+  border-radius: 8px;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.avito-notes-all-card:hover {
+  border-color: #38a169;
+  background: #f3faf6;
+}
+
+.avito-notes-all-link {
+  overflow: hidden;
+  margin-bottom: 5px;
+  color: #6b7177;
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.avito-notes-all-title {
+  color: #2f3337;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.avito-notes-all-price {
+  margin-top: 5px;
+  color: #2f3337;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.avito-notes-all-preview {
+  overflow: hidden;
+  margin-top: 6px;
+  color: #5b636b;
+  font-size: 13px;
+  line-height: 1.4;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.avito-notes-all-empty {
+  padding: 20px 0;
+  color: #7b8188;
+  font-size: 13px;
+  text-align: center;
+}
+
+.avito-notes-footer {
+  margin-top: 12px;
+}
+
+#avito-notes-status {
+  min-height: 16px;
+  color: #5b636b;
+  font-size: 12px;
+}
+
+.avito-notes-save {
+  padding: 9px 14px;
+  border: 0;
+  border-radius: 8px;
+  background: #38a169;
+  color: #ffffff;
+  cursor: pointer;
+  font: 600 14px/1 Arial, sans-serif;
+}
+
+.avito-notes-save:hover {
+  background: #2f855a;
+}

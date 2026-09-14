@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Avito Заметки",
+  "version": "1.0.0",
+  "description": "Личные заметки для страниц Avito.",
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.avito.ru/*",
+        "https://avito.ru/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
